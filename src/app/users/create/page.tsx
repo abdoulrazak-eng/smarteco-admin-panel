@@ -54,7 +54,7 @@ export default function CreateUserPage() {
                             </Link>
                             <div>
                                 <h1 className="text-2xl font-bold text-[#1A1A1A] tracking-tight leading-tight">Create New User</h1>
-                                <p className="text-sm text-[#636E72] font-semibold mt-1">Add a new resident or business to the SmartEco system</p>
+                                <p className="text-sm text-[#636E72] font-semibold mt-1">Add a new resident or business to the SmartEco AI system</p>
                             </div>
                         </div>
                     </div>

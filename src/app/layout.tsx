@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "SmartEco Admin",
-  description: "SmartEco operations dashboard",
+  title: "SmartEco AI Admin",
+  description: "SmartEco AI operations dashboard",
 };
 
 import { SearchProvider } from "@/context/search-context";

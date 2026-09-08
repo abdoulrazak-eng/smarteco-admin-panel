@@ -1,5 +1,5 @@
 /**
- * Shared API client for SmartEco Admin Panel
+ * Shared API client for SmartEco AI Admin Panel
  * Automatically attaches JWT token and handles auth errors.
  */
 

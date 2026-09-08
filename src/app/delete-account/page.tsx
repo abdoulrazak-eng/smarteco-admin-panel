@@ -98,13 +98,13 @@ export default function DeleteAccountPage() {
             <Trash2 className="w-5 h-5" />
           </div>
           <div>
-            <h1 className="font-bold text-xl tracking-tight text-emerald-900">SmartEco</h1>
+            <h1 className="font-bold text-xl tracking-tight text-emerald-900">SmartEco AI</h1>
             <p className="text-xs text-gray-500 font-medium">Smart Waste Management</p>
           </div>
         </div>
         <div className="flex items-center gap-2">
           <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-100">
-            Developer: SmartEco Engineering
+            Developer: SmartEco AI Engineering
           </span>
         </div>
       </header>
@@ -120,7 +120,7 @@ export default function DeleteAccountPage() {
               </span>
             </h2>
             <p className="mt-4 text-lg text-gray-600 leading-relaxed">
-              We value your privacy at SmartEco. Under Google Play policies and local privacy regulations, you have the right to request the permanent deletion of your account and all associated personal data.
+              We value your privacy at SmartEco AI. Under Google Play policies and local privacy regulations, you have the right to request the permanent deletion of your account and all associated personal data.
             </p>
 
             {/* Path 1: Recommended In-App Deletion */}
@@ -138,12 +138,12 @@ export default function DeleteAccountPage() {
                     </span>
                   </h3>
                   <p className="text-sm text-gray-500 mt-1">
-                    If you still have the SmartEco mobile application installed, you can delete your account immediately:
+                    If you still have the SmartEco AI mobile application installed, you can delete your account immediately:
                   </p>
                   <ol className="mt-4 space-y-2 text-sm text-gray-700">
                     <li className="flex items-center gap-2">
                       <ChevronRight className="w-4 h-4 text-emerald-500 shrink-0" />
-                      <span>Open the <strong>SmartEco</strong> app on your mobile device.</span>
+                      <span>Open the <strong>SmartEco AI</strong> app on your mobile device.</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <ChevronRight className="w-4 h-4 text-emerald-500 shrink-0" />
@@ -204,7 +204,7 @@ export default function DeleteAccountPage() {
 
           {/* Footer Info */}
           <footer className="border-t border-gray-100 pt-6 text-xs text-gray-400">
-            <p>© {new Date().getFullYear()} SmartEco Engineering. All rights reserved.</p>
+            <p>© {new Date().getFullYear()} SmartEco AI Engineering. All rights reserved.</p>
             <p className="mt-1">
               For security reasons, all web-submitted deletion requests require manual validation and identity verification. Our compliance team will reach out to you within 48-72 hours.
             </p>
