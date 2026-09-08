@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
+import Link from 'next/link';
 import { 
   Trash2, 
   Info, 
@@ -102,8 +103,14 @@ export default function DeleteAccountPage() {
             <p className="text-xs text-gray-500 font-medium">Smart Waste Management</p>
           </div>
         </div>
-        <div className="flex items-center gap-2">
-          <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-100">
+        <div className="flex items-center gap-3">
+          <Link
+            href="/privacy-policy"
+            className="text-xs font-semibold px-3 py-1.5 rounded-lg border border-gray-200 text-gray-700 hover:bg-gray-100 transition-colors"
+          >
+            Privacy Policy
+          </Link>
+          <span className="hidden sm:inline-block text-xs font-semibold px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-100">
             Developer: SmartEco AI Engineering
           </span>
         </div>
