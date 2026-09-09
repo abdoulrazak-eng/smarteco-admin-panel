@@ -9,7 +9,13 @@ import { Button } from "@/components/ui/button";
 const isPublicRoute = (path: string | null | undefined) => {
     if (!path) return false;
     const clean = path.replace(/\/$/, "") || "/";
-    return clean === "/login" || clean === "/delete-account" || clean === "/expired" || clean.startsWith("/login");
+    return (
+        clean === "/login" ||
+        clean === "/delete-account" ||
+        clean === "/privacy-policy" ||
+        clean === "/expired" ||
+        clean.startsWith("/login")
+    );
 };
 
 export function RouteGuard({ children }: { children: React.ReactNode }) {
