@@ -79,7 +79,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                             <Trash2 className="w-6 h-6 text-white" />
                         </div>
                         <div>
-                            <h2 className="text-xl font-bold text-gray-900 leading-tight">SmartEco AI</h2>
+                            <h2 className="text-xl font-bold text-gray-900 leading-tight">Ejova</h2>
                             <p className="text-[10px] text-gray-500 font-bold uppercase tracking-wider">Operations Portal</p>
                         </div>
                     </div>

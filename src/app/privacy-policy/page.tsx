@@ -19,8 +19,8 @@ import {
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy | SmartEco AI',
-  description: 'Privacy Policy for SmartEco AI - Intelligent Waste Management & Circular Economy Platform.',
+  title: 'Privacy Policy | Ejova',
+  description: 'Privacy Policy for Ejova - Intelligent Waste Management & Circular Economy Platform.',
 };
 
 export default function PrivacyPolicyPage() {
@@ -36,7 +36,7 @@ export default function PrivacyPolicyPage() {
               <ShieldCheck className="w-5 h-5" />
             </div>
             <div>
-              <h1 className="font-bold text-xl tracking-tight text-emerald-900">SmartEco AI</h1>
+              <h1 className="font-bold text-xl tracking-tight text-emerald-900">Ejova</h1>
               <p className="text-xs text-gray-500 font-medium">Intelligent Waste Management & Circular Economy</p>
             </div>
           </div>
@@ -63,7 +63,7 @@ export default function PrivacyPolicyPage() {
             Privacy Policy
           </h1>
           <p className="text-gray-600 max-w-2xl mx-auto text-sm sm:text-base leading-relaxed">
-            How SmartEco AI collects, uses, protects, and handles your personal data across our mobile applications, web services, and smart IoT waste infrastructure.
+            How Ejova collects, uses, protects, and handles your personal data across our mobile applications, web services, and smart IoT waste infrastructure.
           </p>
           <div className="mt-4 text-xs font-medium text-gray-400">
             Effective Date: {lastUpdated}
@@ -82,10 +82,10 @@ export default function PrivacyPolicyPage() {
               Introduction & Scope
             </h2>
             <p className="text-sm text-gray-600 leading-relaxed">
-              <strong>SmartEco AI</strong> (&ldquo;we&rdquo;, &ldquo;our&rdquo;, or &ldquo;us&rdquo;) operates the SmartEco AI mobile application, web portals, and IoT smart waste collection services. This Privacy Policy informs users of our policies regarding the collection, processing, protection, and disclosure of personal data when using our platform.
+              <strong>Ejova</strong> (&ldquo;we&rdquo;, &ldquo;our&rdquo;, or &ldquo;us&rdquo;) operates the Ejova mobile application, web portals, and IoT smart waste collection services. This Privacy Policy informs users of our policies regarding the collection, processing, protection, and disclosure of personal data when using our platform.
             </p>
             <p className="text-sm text-gray-600 leading-relaxed">
-              By using SmartEco AI, you acknowledge that you have read and understood this Privacy Policy. We are dedicated to maintaining the trust of our users through strict privacy standards and compliance with applicable data protection legislation.
+              By using Ejova, you acknowledge that you have read and understood this Privacy Policy. We are dedicated to maintaining the trust of our users through strict privacy standards and compliance with applicable data protection legislation.
             </p>
           </section>
 
@@ -198,10 +198,10 @@ export default function PrivacyPolicyPage() {
             </h2>
             <div className="p-4 rounded-xl bg-emerald-50/70 border border-emerald-100 text-sm text-emerald-950 leading-relaxed space-y-2">
               <p>
-                SmartEco AI values your privacy. When you enable biometric login (Touch ID, Face ID, or Android Biometrics), all authentication is executed exclusively within your operating system&apos;s isolated Secure Enclave / Trusted Execution Environment (TEE).
+                Ejova values your privacy. When you enable biometric login (Touch ID, Face ID, or Android Biometrics), all authentication is executed exclusively within your operating system&apos;s isolated Secure Enclave / Trusted Execution Environment (TEE).
               </p>
               <p className="font-medium text-emerald-900">
-                • SmartEco AI never transmits, receives, or stores your biometric fingerprints or facial geometry on any remote servers.
+                • Ejova never transmits, receives, or stores your biometric fingerprints or facial geometry on any remote servers.
               </p>
             </div>
           </section>
@@ -281,7 +281,7 @@ export default function PrivacyPolicyPage() {
             </p>
             <div className="p-4 rounded-xl border border-gray-200/80 bg-gray-50 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-sm">
               <div className="space-y-1">
-                <p className="font-semibold text-gray-900">SmartEco AI Data Protection Office</p>
+                <p className="font-semibold text-gray-900">Ejova Data Protection Office</p>
                 <p className="text-xs text-gray-600">Kigali, Rwanda</p>
               </div>
               <a 
@@ -300,7 +300,7 @@ export default function PrivacyPolicyPage() {
       {/* Footer */}
       <footer className="border-t border-gray-200 bg-white py-8 px-6 text-center text-xs text-gray-500">
         <div className="max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p>© {new Date().getFullYear()} SmartEco AI. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Ejova. All rights reserved.</p>
           <div className="flex items-center gap-6">
             <Link href="/privacy-policy" className="text-emerald-700 hover:underline font-medium">Privacy Policy</Link>
             <Link href="/delete-account" className="text-gray-500 hover:text-gray-700 transition-colors">Account Deletion</Link>

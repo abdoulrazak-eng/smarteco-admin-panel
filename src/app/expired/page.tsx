@@ -59,7 +59,7 @@ export default function SessionExpiredPage() {
 
                     <CardFooter className="px-8 pb-8 pt-2 flex flex-col items-center">
                         <p className="text-xs text-gray-400 font-medium tracking-tight">
-                            SmartEco AI Admin Portal • Session timed out at 9:48:03 AM
+                            Ejova Admin Portal • Session timed out at 9:48:03 AM
                         </p>
                     </CardFooter>
                 </Card>

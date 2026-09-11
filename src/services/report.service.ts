@@ -47,7 +47,7 @@ export async function downloadReportFile(title: string, format: string = 'CSV', 
     const dateStr = dateRange || new Date().toISOString().slice(0, 10);
     const cleanTitle = title.replace(/[^a-zA-Z0-9_]/g, '_');
     const ext = format.toLowerCase() === 'excel' ? 'csv' : format.toLowerCase();
-    const filename = `SmartEco_AI_${cleanTitle}_${dateStr}.${ext}`;
+    const filename = `Ejova_${cleanTitle}_${dateStr}.${ext}`;
 
     let csvContent = "";
     const lowerTitle = title.toLowerCase();
@@ -56,7 +56,7 @@ export async function downloadReportFile(title: string, format: string = 'CSV', 
         try {
             const pickupsRes = await apiGet<{ success: boolean; data: any[] }>('/admin/pickups?limit=100');
             const pickups = pickupsRes?.data || [];
-            csvContent = `SmartEco AI Kigali - Daily Operations & Pickup Audit Report\nReport Title: ${title}\nGenerated On: ${new Date().toLocaleString()}\nDate Range: ${dateStr}\n\n`;
+            csvContent = `Ejova Kigali - Daily Operations & Pickup Audit Report\nReport Title: ${title}\nGenerated On: ${new Date().toLocaleString()}\nDate Range: ${dateStr}\n\n`;
             csvContent += `Pickup Ref,User Name,User Phone,Waste Type,Status,Scheduled Date,Time Slot,Collector Name,Address\n`;
             if (pickups.length > 0) {
                 pickups.forEach(p => {
@@ -68,13 +68,13 @@ export async function downloadReportFile(title: string, format: string = 'CSV', 
                 csvContent += `"ECO-SAMPLE01","Jean Baptiste","+250788123456","ORGANIC","COMPLETED","${dateStr}","MORNING_8_10","Patrick Mugisha","KN 4 Ave, Nyarugenge"\n`;
             }
         } catch (e) {
-            csvContent = `SmartEco AI Kigali - Daily Operations Report\nGenerated On: ${new Date().toLocaleString()}\n\nMetric,Value,Unit,Notes\nTotal Pickups Completed,4890,Pickups,Sector wide\nTotal Waste Volume,14250,Kg,Collected\n`;
+            csvContent = `Ejova Kigali - Daily Operations Report\nGenerated On: ${new Date().toLocaleString()}\n\nMetric,Value,Unit,Notes\nTotal Pickups Completed,4890,Pickups,Sector wide\nTotal Waste Volume,14250,Kg,Collected\n`;
         }
     } else if (lowerTitle.includes("finan") || lowerTitle.includes("audit") || lowerTitle.includes("revenue")) {
         try {
             const paymentsRes = await apiGet<{ success: boolean; data: any[] }>('/payments');
             const payments = paymentsRes?.data || [];
-            csvContent = `SmartEco AI Kigali - Financial & Payment Reconciliation Audit Report\nReport Title: ${title}\nGenerated On: ${new Date().toLocaleString()}\nDate Range: ${dateStr}\n\n`;
+            csvContent = `Ejova Kigali - Financial & Payment Reconciliation Audit Report\nReport Title: ${title}\nGenerated On: ${new Date().toLocaleString()}\nDate Range: ${dateStr}\n\n`;
             csvContent += `Transaction Ref,User Name,Amount (RWF),Currency,Payment Method,Status,Paid Date,Pickup Reference\n`;
             if (payments.length > 0) {
                 payments.forEach(p => {
@@ -85,13 +85,13 @@ export async function downloadReportFile(title: string, format: string = 'CSV', 
                 csvContent += `"PAY-A3F8K2B1","Jean Baptiste","1000","RWF","MTN_MOMO","COMPLETED","${dateStr}","ECO-A3F8K"\n`;
             }
         } catch (e) {
-            csvContent = `SmartEco AI Kigali - Financial Audit Report\nGenerated On: ${new Date().toLocaleString()}\n\nMetric,Value,Unit,Notes\nTotal Revenue Processed,2850000,RWF,Mobile Money\nSuccess Rate,98.5,%,MTN & Airtel\n`;
+            csvContent = `Ejova Kigali - Financial Audit Report\nGenerated On: ${new Date().toLocaleString()}\n\nMetric,Value,Unit,Notes\nTotal Revenue Processed,2850000,RWF,Mobile Money\nSuccess Rate,98.5,%,MTN & Airtel\n`;
         }
     } else if (lowerTitle.includes("user") || lowerTitle.includes("engagement")) {
         try {
             const usersRes = await apiGet<{ success: boolean; data: any[] }>('/admin/users?limit=100');
             const users = usersRes?.data || [];
-            csvContent = `SmartEco AI Kigali - User Engagement & Account Tier Report\nReport Title: ${title}\nGenerated On: ${new Date().toLocaleString()}\nDate Range: ${dateStr}\n\n`;
+            csvContent = `Ejova Kigali - User Engagement & Account Tier Report\nReport Title: ${title}\nGenerated On: ${new Date().toLocaleString()}\nDate Range: ${dateStr}\n\n`;
             csvContent += `User ID,First Name,Last Name,Phone,Email,Role,User Type,EcoPoints,EcoTier,Active Status\n`;
             if (users.length > 0) {
                 users.forEach(u => {
@@ -101,13 +101,13 @@ export async function downloadReportFile(title: string, format: string = 'CSV', 
                 csvContent += `"USR-001","Marie","Uwase","+250788111222","marie@example.com","USER","RESIDENTIAL","350","ECO_WARRIOR","Active"\n`;
             }
         } catch (e) {
-            csvContent = `SmartEco AI Kigali - User Engagement Report\nGenerated On: ${new Date().toLocaleString()}\n\nMetric,Value,Unit,Notes\nTotal Registered Users,1240,Users,Residential & Business\n`;
+            csvContent = `Ejova Kigali - User Engagement Report\nGenerated On: ${new Date().toLocaleString()}\n\nMetric,Value,Unit,Notes\nTotal Registered Users,1240,Users,Residential & Business\n`;
         }
     } else if (lowerTitle.includes("collector") || lowerTitle.includes("performance")) {
         try {
             const collectorsRes = await apiGet<{ success: boolean; data: any[] }>('/admin/collectors');
             const collectors = collectorsRes?.data || [];
-            csvContent = `SmartEco AI Kigali - Collector Performance & Dispatch Report\nReport Title: ${title}\nGenerated On: ${new Date().toLocaleString()}\nDate Range: ${dateStr}\n\n`;
+            csvContent = `Ejova Kigali - Collector Performance & Dispatch Report\nReport Title: ${title}\nGenerated On: ${new Date().toLocaleString()}\nDate Range: ${dateStr}\n\n`;
             csvContent += `Collector ID,Collector Name,Phone,Vehicle Plate,Assigned Zone,Total Pickups,Rating,Approval Status,Availability\n`;
             if (collectors.length > 0) {
                 collectors.forEach(c => {
@@ -118,13 +118,13 @@ export async function downloadReportFile(title: string, format: string = 'CSV', 
                 csvContent += `"COL-001","Patrick Mugisha","+250788999888","RAD 123A","Kigali-Central","245","4.8","Approved","Available"\n`;
             }
         } catch (e) {
-            csvContent = `SmartEco AI Kigali - Collector Performance Report\nGenerated On: ${new Date().toLocaleString()}\n\nMetric,Value,Unit,Notes\nTotal Active Collectors,18,Collectors,Central Kigali\n`;
+            csvContent = `Ejova Kigali - Collector Performance Report\nGenerated On: ${new Date().toLocaleString()}\n\nMetric,Value,Unit,Notes\nTotal Active Collectors,18,Collectors,Central Kigali\n`;
         }
     } else if (lowerTitle.includes("waste") || lowerTitle.includes("analytic")) {
         try {
             const wasteRes = await apiGet<{ success: boolean; data: any }>('/admin/analytics/pickups');
             const breakdown = wasteRes?.data?.byWasteType || [];
-            csvContent = `SmartEco AI Kigali - Waste Stream & Categorization Analytics Report\nReport Title: ${title}\nGenerated On: ${new Date().toLocaleString()}\nDate Range: ${dateStr}\n\n`;
+            csvContent = `Ejova Kigali - Waste Stream & Categorization Analytics Report\nReport Title: ${title}\nGenerated On: ${new Date().toLocaleString()}\nDate Range: ${dateStr}\n\n`;
             csvContent += `Waste Category,Total Collections,Percentage Share (%),Est Weight (Kg)\n`;
             if (breakdown.length > 0) {
                 breakdown.forEach((w: any) => {
@@ -134,14 +134,14 @@ export async function downloadReportFile(title: string, format: string = 'CSV', 
                 csvContent += `"ORGANIC","1820","33.5%","27300 Kg"\n"RECYCLABLE","1540","28.4%","23100 Kg"\n"EWASTE","320","5.9%","4800 Kg"\n`;
             }
         } catch (e) {
-            csvContent = `SmartEco AI Kigali - Waste Analytics Report\nGenerated On: ${new Date().toLocaleString()}\n\nWaste Category,Percentage Share\nOrganic,33.5%\nRecyclable,28.4%\n`;
+            csvContent = `Ejova Kigali - Waste Analytics Report\nGenerated On: ${new Date().toLocaleString()}\n\nWaste Category,Percentage Share\nOrganic,33.5%\nRecyclable,28.4%\n`;
         }
     } else {
         // IoT System Status Report
         try {
             const binsRes = await apiGet<{ success: boolean; data: any[] }>('/admin/bins');
             const bins = binsRes?.data || [];
-            csvContent = `SmartEco AI Kigali - IoT Smart Bin Telemetry & Hardware Status Report\nReport Title: ${title}\nGenerated On: ${new Date().toLocaleString()}\nDate Range: ${dateStr}\n\n`;
+            csvContent = `Ejova Kigali - IoT Smart Bin Telemetry & Hardware Status Report\nReport Title: ${title}\nGenerated On: ${new Date().toLocaleString()}\nDate Range: ${dateStr}\n\n`;
             csvContent += `Bin QR/ID,Owner Name,Waste Type,Fill Level (%),Alert Status,Address,Device EUI,Last Telemetry Signal\n`;
             if (bins.length > 0) {
                 bins.forEach(b => {
@@ -154,7 +154,7 @@ export async function downloadReportFile(title: string, format: string = 'CSV', 
                 csvContent += `"BIN-001","Jean Baptiste","ORGANIC","85%","Full","KN 4 Ave, Nyarugenge","EUI-98F12A34","${dateStr}"\n`;
             }
         } catch (e) {
-            csvContent = `SmartEco AI Kigali - IoT System Status Report\nGenerated On: ${new Date().toLocaleString()}\n\nMetric,Value,Unit,Notes\nActive IoT Bins,18,Units,Online\n`;
+            csvContent = `Ejova Kigali - IoT System Status Report\nGenerated On: ${new Date().toLocaleString()}\n\nMetric,Value,Unit,Notes\nActive IoT Bins,18,Units,Online\n`;
         }
     }
 

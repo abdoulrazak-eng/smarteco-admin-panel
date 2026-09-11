@@ -54,7 +54,7 @@ export default function LoginPage() {
             <Trash2 className="w-10 h-10 text-white" />
           </div>
           <div className="text-center">
-            <h1 className="text-2xl font-bold text-gray-900 tracking-tight">SmartEco AI Admin Portal</h1>
+            <h1 className="text-2xl font-bold text-gray-900 tracking-tight">Ejova Admin Portal</h1>
             <div className="flex items-center justify-center text-gray-500 mt-1">
               <ShieldCheck className="w-4 h-4 mr-1" />
               <span className="text-sm font-medium">Secure Operations Dashboard</span>
@@ -139,7 +139,7 @@ export default function LoginPage() {
         {/* Footer Info */}
         <div className="text-center space-y-2 pt-4">
           <p className="text-xs text-gray-500 font-medium">
-            SmartEco AI Admin Portal © 2026
+            Ejova Admin Portal © 2026
           </p>
           <div className="flex items-center justify-center space-x-4 text-[10px] text-gray-400 font-bold uppercase tracking-widest">
             <div className="flex items-center">

@@ -90,7 +90,7 @@ export default function DashboardPage() {
                 <div className="min-w-0">
                     <h1 className="text-xl md:text-2xl font-bold text-gray-900 tracking-tight leading-tight truncate">Operations Dashboard</h1>
                     <p className="text-[10px] md:text-sm text-gray-500 font-medium mt-1 truncate">
-                        Real-time Kigali SmartEco AI Operations Analytics <span className="hidden xs:inline">•</span>
+                        Real-time Kigali Ejova Operations Analytics <span className="hidden xs:inline">•</span>
                         <span className="text-gray-400 font-normal ml-1 hidden xs:inline">
                             {currentTime ? `Last updated: ${currentTime}` : "Loading timestamp..."}
                         </span>
